@@ -513,9 +513,11 @@ white-space: nowrap;
 display: flex;
 gap: 0.6rem;
 flex-wrap: nowrap;
-overflow-x: auto;
-scrollbar-width: none;
+overflow-x: scroll;
 -webkit-overflow-scrolling: touch;
+scrollbar-width: none;
+touch-action: pan-x;
+max-width: 100%;
 }
 
 .county-chips::-webkit-scrollbar { display: none; }
@@ -725,27 +727,50 @@ section { padding: 52px 1rem; }
 .about-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
 }
 
-/* Override any dark mode browser behavior */
+/* Force light mode - override dark mode browser behavior with hardcoded values */
 @media (prefers-color-scheme: dark) {
-body { background: #FDFAF6 !important; color: #2C1F14 !important; }
-nav { background: rgba(247,243,237,0.93) !important; }
-.hero { background: var(–cream) !important; }
-#services { background: white !important; }
-#who { background: var(–cream) !important; }
-#about { background: white !important; }
-.service-card { background: var(–cream) !important; }
-.audience-card { background: white !important; }
-.hero-card { background: white !important; }
-.credentials-panel { background: var(–cream) !important; }
-.contact-item { background: white !important; }
-.contact-note { background: white !important; }
-#contact { background: var(–cream) !important; }
-.hero-eyebrow, .section-eyebrow { color: var(–terracotta) !important; }
-.hero h1, .section-title, .audience-card h3, .service-card h3, .about-text p strong { color: var(–deep) !important; }
-.hero-desc, .service-card p, .audience-card p, .about-text p { color: var(–slate) !important; }
-.nav-name { color: var(–bark) !important; }
-.hero-stat-value { color: var(–deep) !important; }
-.hero-stat-label { color: var(–bark) !important; }
+html, body { background: #FDFAF6 !important; color: #2C1F14 !important; }
+nav { background: rgba(247,243,237,0.96) !important; border-bottom-color: #E8DFD0 !important; }
+.nav-name { color: #6B4E35 !important; }
+.nav-links a { color: #4A5568 !important; }
+.hero { background: #F7F3ED !important; }
+.hero h1 { color: #2C1F14 !important; }
+.hero h1 em { color: #B5714A !important; }
+.hero-eyebrow { color: #B5714A !important; }
+.hero-desc { color: #4A5568 !important; }
+.hero-card { background: #FFFFFF !important; }
+.hero-card-label { color: #7A8C7E !important; }
+.hero-stat-value { color: #2C1F14 !important; }
+.hero-stat-label { color: #6B4E35 !important; }
+.hero-stat { border-bottom-color: #E8DFD0 !important; }
+.cred-pill { background: #FFFFFF !important; color: #6B4E35 !important; border-color: #E8DFD0 !important; }
+#services { background: #FFFFFF !important; }
+.service-card { background: #F7F3ED !important; }
+.service-card h3 { color: #2C1F14 !important; }
+.service-card p { color: #4A5568 !important; }
+#who { background: #F7F3ED !important; }
+.audience-card { background: #FFFFFF !important; }
+.audience-card h3 { color: #2C1F14 !important; }
+.audience-card p { color: #4A5568 !important; }
+#about { background: #FFFFFF !important; }
+.about-text p { color: #4A5568 !important; }
+.about-text p strong { color: #2C1F14 !important; }
+.credentials-panel { background: #F7F3ED !important; }
+.cred-item-text { color: #4A5568 !important; }
+.cred-item-text strong { color: #2C1F14 !important; }
+.cred-section-title { color: #7A8C7E !important; }
+#counties { background: #E8DFD0 !important; }
+.counties-label { color: #2C1F14 !important; }
+.county-chip { background: #FFFFFF !important; color: #6B4E35 !important; border-color: #C4A882 !important; }
+#contact { background: #F7F3ED !important; }
+.contact-item { background: #FFFFFF !important; }
+.contact-item-label { color: #7A8C7E !important; }
+.contact-item-value { color: #2C1F14 !important; }
+.contact-note { background: #FFFFFF !important; color: #4A5568 !important; }
+.contact-note strong { color: #2C1F14 !important; }
+.section-title { color: #2C1F14 !important; }
+.section-eyebrow { color: #B5714A !important; }
+.section-subtitle { color: #4A5568 !important; }
 }
 </style>
 
