@@ -9,52 +9,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 <style>
 
-  /* ── LIGHT MODE ── */
+  /* ── FORCED DARK NAVY THEME ── */
   :root {
-    --bg:          #FDFAF6;
-    --bg-alt:      #F7F3ED;
-    --bg-card:     #FFFFFF;
-    --border:      #E8DFD0;
-    --text:        #2C1F14;
-    --text-mid:    #4A5568;
-    --text-muted:  #9A8878;
-    --accent:      #B5714A;
-    --accent-dark: #6B4E35;
-    --accent-light:#FAF0E8;
-    --gold:        #C9963A;
-    --sage:        #7A8C7E;
-    --nav-bg:      rgba(253,250,246,0.95);
-    --card-shadow: 0 8px 40px rgba(44,31,20,0.12);
-    --counties-bg: #E8DFD0;
-    --chip-bg:     #FFFFFF;
-    --chip-text:   #6B4E35;
-    --chip-border: #C4A882;
-    --footer-bg:   #2C1F14;
-  }
-
-  /* ── DARK MODE ── */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg:          #0D1825;
-      --bg-alt:      #111F30;
-      --bg-card:     #162438;
-      --border:      #243550;
-      --text:        #F0F4F8;
-      --text-mid:    #C4D0DC;
-      --text-muted:  #7A9AB8;
-      --accent:      #7BAFD4;
-      --accent-dark: #9DC8E8;
-      --accent-light:#1A2E42;
-      --gold:        #7BAFD4;
-      --sage:        #7BAFD4;
-      --nav-bg:      rgba(13,24,37,0.97);
-      --card-shadow: 0 8px 40px rgba(0,0,0,0.5);
-      --counties-bg: #111F30;
-      --chip-bg:     #1A2E42;
-      --chip-text:   #7BAFD4;
-      --chip-border: #2A4060;
-      --footer-bg:   #080E16;
-    }
+    --bg:          #0D1825;
+    --bg-alt:      #111F30;
+    --bg-card:     #162438;
+    --border:      #243550;
+    --text:        #F0F4F8;
+    --text-mid:    #C4D0DC;
+    --text-muted:  #7A9AB8;
+    --accent:      #7BAFD4;
+    --accent-dark: #9DC8E8;
+    --accent-light:#1A2E42;
+    --gold:        #7BAFD4;
+    --sage:        #7BAFD4;
+    --nav-bg:      rgba(13,24,37,0.97);
+    --card-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    --counties-bg: #111F30;
+    --chip-bg:     #1A2E42;
+    --chip-text:   #7BAFD4;
+    --chip-border: #2A4060;
+    --footer-bg:   #080E16;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -199,19 +174,19 @@
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
-    background: var(--chip-bg);
-    border: 1px solid var(--chip-border);
+    background: rgba(123,175,212,0.18);
+    border: 1px solid rgba(123,175,212,0.6);
     border-radius: 100px;
     padding: 0.3rem 0.85rem;
     font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--chip-text);
+    font-weight: 700;
+    color: #C8E6F8;
     letter-spacing: 0.04em;
     white-space: nowrap;
     flex-shrink: 0;
   }
 
-  .cred-pill::before { content: "✦"; color: var(--gold); font-size: 0.55rem; }
+  .cred-pill::before { content: "✦"; color: #7BAFD4; font-size: 0.55rem; }
 
   .hero-cta-group {
     display: flex;
@@ -470,7 +445,7 @@
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: #7BAFD4;
     white-space: nowrap;
   }
 
@@ -488,13 +463,13 @@
   .county-chips::-webkit-scrollbar { display: none; }
 
   .county-chip {
-    background: var(--chip-bg);
-    border: 1px solid var(--chip-border);
+    background: rgba(123,175,212,0.18);
+    border: 1px solid rgba(123,175,212,0.6);
     border-radius: 100px;
     padding: 0.4rem 1rem;
     font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--chip-text);
+    font-weight: 600;
+    color: #C8E6F8;
     white-space: nowrap;
     flex-shrink: 0;
   }
@@ -648,7 +623,7 @@
       <p class="hero-eyebrow">Forensic Social Work &middot; California</p>
       <h1>Forensic social work<br>for <em>California courts.</em></h1>
       <p class="hero-desc">
-        I'm a Licensed Clinical Social Worker and Certified Addiction Drug Counselor with over ten years of clinical experience. My forensic practice focuses on Mental Health Diversion assessments, Drug Court case management, and social history reports for courts and attorneys across California.
+        I'm a Licensed Clinical Social Worker and Certified Addiction Drug Counselor with over ten years of clinical experience, including independent forensic practice across California's court system. My work includes Mental Health Diversion assessments, Drug Court case management, and social history reports for courts and attorneys across California.
       </p>
       <div class="cred-bar">
         <span class="cred-pill">LCSW</span>
@@ -709,17 +684,17 @@
     <div class="services-grid">
       <div class="service-card">
         <h3>PC §1001.36 Mental Health Diversion Assessments</h3>
-        <p>I evaluate whether someone qualifies for Mental Health Diversion under California Penal Code §1001.36. My assessments are thorough, clearly written, and accepted across multiple California courts.</p>
-        <span class="service-tag">Court Accepted</span>
+        <p>I conduct evaluations to assess whether an individual may meet criteria for Mental Health Diversion under California Penal Code §1001.36. Assessments are grounded in clinical frameworks and written for a judicial audience.</p>
+        <span class="service-tag">PC §1001.36</span>
       </div>
       <div class="service-card">
         <h3>Social History Reports</h3>
-        <p>I write reports that give the court a thorough understanding of a person's background — trauma history, family context, mental health, and substance use — written clearly for a judicial audience.</p>
-        <span class="service-tag">Defense Focused</span>
+        <p>I prepare reports that provide the court with relevant background information about an individual — including developmental history, family context, mental health, and substance use — written in plain language for a judicial audience.</p>
+        <span class="service-tag">Court Documentation</span>
       </div>
       <div class="service-card">
         <h3>Drug Court Case Management</h3>
-        <p>I manage Drug Court cases from intake through graduation, tracking phase progression, coordinating with treatment providers, and keeping attorneys and the court informed along the way.</p>
+        <p>I provide case management for Drug Court participants from intake through program completion, coordinating with treatment providers and keeping all parties informed of progress and compliance.</p>
         <span class="service-tag">Multi County</span>
       </div>
       <div class="service-card">
@@ -734,8 +709,8 @@
       </div>
       <div class="service-card">
         <h3>Attorney Consultation</h3>
-        <p>I am available for consultation with defense attorneys to help identify appropriate diversion options and determine the best approach for a given case.</p>
-        <span class="service-tag">Attorney Partnership</span>
+        <p>I am available for case consultation to help identify appropriate diversion pathways and clinical considerations relevant to a given matter.</p>
+        <span class="service-tag">Case Consultation</span>
       </div>
     </div>
   </div>
@@ -749,8 +724,8 @@
     <p class="section-subtitle">Forensic social work touches a lot of people. Here is how I can help each of them.</p>
     <div class="audience-grid">
       <div class="audience-card">
-        <h3>Defense Attorneys</h3>
-        <p>I work with defense attorneys on diversion eligibility, social history reports, and Drug Court case management. I aim to be responsive and to provide documentation that is useful in court.</p>
+        <h3>Attorneys</h3>
+        <p>I work with attorneys on diversion eligibility screening, social history reports, and Drug Court case management. I aim to be responsive and to provide documentation that is clear and useful in court.</p>
       </div>
       <div class="audience-card">
         <h3>Courts and Judges</h3>
@@ -775,10 +750,10 @@
     <h2 class="section-title">The person behind the work</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm a Licensed Clinical Social Worker and Certified Addiction Drug Counselor with over ten years of clinical social work experience, including several years focused on forensic practice across California's court system.</p>
-        <p>My forensic work has centered on <strong>PC §1001.36 Mental Health Diversion</strong> assessments, Drug Court case management, and social history and mitigation reports. I have completed court accepted assessments across five counties and work regularly with attorneys, treatment providers, and court staff.</p>
-        <p>I also work as a clinical social worker at Kaiser Permanente. That role keeps my clinical skills current and informs how I approach forensic work.</p>
-        <p>I believe that context matters in every case, and I try to provide courts and attorneys with a thorough, honest picture of the people I work with.</p>
+        <p>I'm a Licensed Clinical Social Worker and Certified Addiction Drug Counselor with over ten years of clinical social work experience, including independent forensic practice across California's court system.</p>
+        <p>My forensic work has centered on PC §1001.36 Mental Health Diversion assessments, Drug Court case management, and social history reports. I have submitted assessments across multiple California counties and work regularly with attorneys, treatment providers, and court staff.</p>
+        <p>I also work as a clinical social worker at Kaiser Permanente. That concurrent role keeps my clinical skills current and directly informs my forensic practice.</p>
+        <p>I approach each case with the goal of providing courts and attorneys with an accurate, clinically grounded picture of the individuals I evaluate.</p>
       </div>
       <div class="credentials-panel">
         <p class="cred-section-title">Licensure</p>
