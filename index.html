@@ -631,34 +631,48 @@ nav { padding: 0 1.25rem; }
 .nav-links { display: none; }
 
 ```
-.hero { padding: 80px 1.25rem 52px; min-height: auto; }
+.hero { padding: 80px 1rem 52px; min-height: auto; overflow: hidden; }
 
 .hero-inner {
   grid-template-columns: 1fr;
   gap: 2rem;
   width: 100%;
-}
-
-.hero-card { order: 1; }
-
-.hero h1 { font-size: 1.85rem; }
-
-.hero-desc { font-size: 0.95rem; }
-
-.hero-card {
-  width: 100%;
   max-width: 100%;
 }
 
-.hero-stat-value { font-size: 0.85rem; }
-
-.services-grid {
-  grid-template-columns: 1fr;
+.hero-card {
+  order: 1;
+  width: 100%;
+  max-width: 100%;
+  padding: 1.25rem;
+  overflow: hidden;
 }
 
-.audience-grid {
-  grid-template-columns: 1fr;
+.hero-card::before { display: none; }
+
+.hero-card img {
+  width: 90px;
+  height: 90px;
 }
+
+.hero h1 { font-size: 1.75rem; }
+.hero-desc { font-size: 0.95rem; }
+
+.hero-stat { padding: 0.75rem 0; }
+
+.hero-stat-label { font-size: 0.62rem; }
+
+.hero-stat-value {
+  font-size: 0.82rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.hero-card-label { font-size: 0.65rem; }
+
+.services-grid { grid-template-columns: 1fr; }
+.audience-grid { grid-template-columns: 1fr; }
 
 .about-grid,
 .contact-grid {
@@ -672,9 +686,8 @@ nav { padding: 0 1.25rem; }
   gap: 1rem;
 }
 
-section { padding: 52px 1.25rem; }
-#counties { padding: 40px 1.25rem; }
-
+section { padding: 52px 1rem; }
+#counties { padding: 40px 1rem; }
 .section-title { font-size: 1.5rem; }
 ```
 
