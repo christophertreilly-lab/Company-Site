@@ -3,15 +3,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light only">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chris Reilly, LCSW, CADC III — Forensic Social Worker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 <style>
+  /* Force light mode regardless of device settings */
   :root {
-    color-scheme: light;
+    color-scheme: only light;
     --cream: #F7F3ED;
     --warm-white: #FDFAF6;
     --sand: #E8DFD0;
@@ -722,6 +723,29 @@ section { padding: 52px 1rem; }
 @media (min-width: 768px) and (max-width: 1024px) {
 .hero-inner { grid-template-columns: 1fr 300px; gap: 3rem; }
 .about-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+}
+
+/* Override any dark mode browser behavior */
+@media (prefers-color-scheme: dark) {
+body { background: #FDFAF6 !important; color: #2C1F14 !important; }
+nav { background: rgba(247,243,237,0.93) !important; }
+.hero { background: var(–cream) !important; }
+#services { background: white !important; }
+#who { background: var(–cream) !important; }
+#about { background: white !important; }
+.service-card { background: var(–cream) !important; }
+.audience-card { background: white !important; }
+.hero-card { background: white !important; }
+.credentials-panel { background: var(–cream) !important; }
+.contact-item { background: white !important; }
+.contact-note { background: white !important; }
+#contact { background: var(–cream) !important; }
+.hero-eyebrow, .section-eyebrow { color: var(–terracotta) !important; }
+.hero h1, .section-title, .audience-card h3, .service-card h3, .about-text p strong { color: var(–deep) !important; }
+.hero-desc, .service-card p, .audience-card p, .about-text p { color: var(–slate) !important; }
+.nav-name { color: var(–bark) !important; }
+.hero-stat-value { color: var(–deep) !important; }
+.hero-stat-label { color: var(–bark) !important; }
 }
 </style>
 
