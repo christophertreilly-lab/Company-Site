@@ -601,6 +601,64 @@
     .about-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
   }
 
+  /* ── FAQ ── */
+  #faq { background: var(--bg); }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 800px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.25rem 0;
+    text-align: left;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .faq-question:hover { color: var(--accent); }
+
+  .faq-icon {
+    font-size: 1.2rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    line-height: 1;
+  }
+
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  .faq-answer {
+    display: none;
+    padding: 0 0 1.25rem;
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+    max-width: 680px;
+  }
+
+  .faq-item.open .faq-answer { display: block; }
+
 </style>
 </head>
 <body>
@@ -611,6 +669,7 @@
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#who">Who I Work With</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
   </ul>
@@ -633,7 +692,8 @@
         <span class="cred-pill">Social History</span>
       </div>
       <div class="hero-cta-group">
-        <a href="#services" class="btn-primary">See My Services</a>
+        <a href="#faq" class="btn-primary">Attorney FAQ</a>
+        <a href="#services" class="btn-secondary">See My Services</a>
         <a href="#contact" class="btn-secondary">Get in touch</a>
       </div>
     </div>
@@ -812,6 +872,107 @@
     </div>
   </div>
 </section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <p class="section-eyebrow">For Attorneys</p>
+    <h2 class="section-title">Frequently asked questions</h2>
+    <p class="section-subtitle">Common questions from attorneys before retaining my services.</p>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I get started working with you?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Reach out by email or phone with a brief summary of the case and the type of evaluation or service you need. For court-appointed matters, I will need a formal appointment order before beginning any work. For private matters, a signed fee agreement is required prior to starting.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What do you need from me before beginning an evaluation?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          For court-appointed evaluations, I need a copy of the appointment order. It is also helpful to receive any available records — police reports, prior mental health records, medical history, and prior court documents — though I can begin the process while records are being gathered. For private referrals, a signed fee agreement comes first.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What are your typical turnaround times?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Treatment plans and clinical assessments are typically completed within 14 days of receiving necessary records and completing the clinical interview. Social history and mitigation reports generally take approximately 30 days depending on the scope of records and collateral contacts required.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Are you an independent evaluator?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes. I accept both court-appointed and privately retained matters. My role is to conduct an objective clinical evaluation and present findings accurately, regardless of who retains me. I do not provide evaluations designed to reach a predetermined conclusion.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What clinical frameworks and assessment tools do you use?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          I use the SCID-5 (Structured Clinical Interview for DSM-5 Disorders) for diagnostic assessment and the ASAM criteria for substance use evaluation and treatment planning. Social history reports draw on a comprehensive biopsychosocial framework. All work is grounded in established clinical standards.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you provide written reports?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes. All evaluations and assessments result in a written report suitable for submission to the court. Reports are written in plain language with clinical findings clearly documented and supported.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Are you available to testify?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes. I am available to testify regarding my findings when required. I can speak to the clinical basis for my conclusions, the assessment tools used, and the standards applied in reaching my opinions.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What counties do you work in?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          I currently accept referrals from San Francisco, Alameda, Contra Costa, Santa Clara, and Los Angeles counties. If you have a matter in another California county, feel free to reach out and I will let you know whether I can accommodate it.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
 
 <!-- CONTACT -->
 <section id="contact">
