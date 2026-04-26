@@ -132,6 +132,7 @@ align-items: center;
 position: relative;
 z-index: 1;
 width: 100%;
+min-width: 0;
 }
 
 .hero-eyebrow {
@@ -244,6 +245,9 @@ border-radius: 20px;
 padding: 2rem;
 box-shadow: 0 8px 40px rgba(44,31,20,0.18);
 position: relative;
+width: 100%;
+min-width: 0;
+overflow: hidden;
 }
 
 .hero-card::before {
@@ -287,6 +291,8 @@ font-size: 0.95rem;
 font-weight: 500;
 color: var(–deep);
 line-height: 1.45;
+word-wrap: break-word;
+overflow-wrap: break-word;
 }
 
 /* ── SHARED ── */
@@ -625,14 +631,34 @@ nav { padding: 0 1.25rem; }
 .nav-links { display: none; }
 
 ```
-.hero { padding: 90px 1.25rem 60px; min-height: auto; }
+.hero { padding: 80px 1.25rem 52px; min-height: auto; }
 
 .hero-inner {
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
+  width: 100%;
 }
 
-.hero-card { order: -1; }
+.hero-card { order: 1; }
+
+.hero h1 { font-size: 1.85rem; }
+
+.hero-desc { font-size: 0.95rem; }
+
+.hero-card {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-stat-value { font-size: 0.85rem; }
+
+.services-grid {
+  grid-template-columns: 1fr;
+}
+
+.audience-grid {
+  grid-template-columns: 1fr;
+}
 
 .about-grid,
 .contact-grid {
@@ -646,8 +672,10 @@ nav { padding: 0 1.25rem; }
   gap: 1rem;
 }
 
-section { padding: 60px 1.25rem; }
-#counties { padding: 48px 1.25rem; }
+section { padding: 52px 1.25rem; }
+#counties { padding: 40px 1.25rem; }
+
+.section-title { font-size: 1.5rem; }
 ```
 
 }
