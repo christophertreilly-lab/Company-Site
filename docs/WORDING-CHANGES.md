@@ -54,3 +54,13 @@ Public repo: contains only site wording. Approve or revert each line. Nothing el
 - Old: I am available to testify regarding my findings when required.
 - New: I'm available to testify about my findings when required.
 
+
+# Commit 2 (layout redesign): wording that changed only because of the new layout
+
+- Removed the small label tags on each service card ("PC §1001.36", "Court Documentation", "Multi County", "CADC III Credentialed", "Ongoing Support", "Case Consultation") and the small caps labels above section titles ("What I Do", "Who I Work With", "About", "For Attorneys", "Get in Touch"). They repeated the headings.
+- Hero buttons: "Attorney FAQ" / "See My Services" / "Get in touch" became "Email Chris" / "Call 650.260.4898" / "Attorney FAQ". Both contact details were already on the page.
+- Hero card label "Practice Areas" removed (the four facts under it are unchanged and sit under the photo).
+- Credential pills row (LCSW, CADC III, PC §1001.36, Drug Court, Social History) removed from the hero (all already stated in the text).
+- "Courts Served" label became "Courts served:" followed by the same five counties.
+- Added a "Skip to main content" link (hidden until focused) and the photo caption "Chris Reilly, LCSW, CADC III".
+- Colors: light paper background with navy text (derived from the old navy and blue). The old forced dark theme is in commit 1.
