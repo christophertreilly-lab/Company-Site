@@ -64,3 +64,10 @@ Public repo: contains only site wording. Approve or revert each line. Nothing el
 - "Courts Served" label became "Courts served:" followed by the same five counties.
 - Added a "Skip to main content" link (hidden until focused) and the photo caption "Chris Reilly, LCSW, CADC III".
 - Colors: light paper background with navy text (derived from the old navy and blue). The old forced dark theme is in commit 1.
+
+# Commit 3 (credentials, verified by the owner against the certificates)
+
+- Credential name unified: "Certified Addiction Drug Counselor" -> "Certified Alcohol and Drug Counselor" (hero intro and About paragraph).
+- Credentials panel, LCSW line: "State of California" -> "State of California, License No. 132447" plus a "Verify my license" link to https://search.dca.ca.gov/.
+- Credentials panel, CADC III line: "CCAPP, California" -> "CCAPP Credentialing, Credential No. B00001760521".
+- Footer: added one line with both numbers. No expiry dates are shown on purpose.
